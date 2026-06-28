@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online-tickets</title>
+    <link rel="stylesheet" href="online-tickets.css">
+   
+</head>
+
+<body>
+    <header>
+        <h1>STD Lanka Express</h1>
+        <p>Fast & Reliable Bus Passenger Service</p>
+    </header>
+
+      <nav class="main-navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+           
+            <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking-sheet.html" class="btn-booking">Booking Sheets</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="features-container">
+  
+     <div class="booking-container">
+        <h2>Book Your Bus Ticket</h2>
+        <form id="bookingForm">
+            
+      
+            <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" required>
+                    <option value="" disabled selected>Select Departure City</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Jaffna">Jaffna</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" required>
+                    <option value="" disabled selected>Select Destination City</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Jaffna">Jaffna</option>
+                </select>
+            </div>
+
+            <!-- Date and Seats -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Journey Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" min="1" max="10" value="1" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-book">Check Availability & Book</button>
+        </form>
+
+        <!-- Dynamic Success/Receipt Section -->
+        <div id="receipt" class="receipt-card hidden">
+            <h3>Booking Confirmed! 🚌</h3>
+            <hr>
+            <p><strong>Route:</strong> <span id="summary-route"></span></p>
+            <p><strong>Date:</strong> <span id="summary-date"></span></p>
+            <p><strong>Seats:</strong> <span id="summary-seats"></span></p>
+            <p class="total-price"><strong>Total Price:</strong> LKR <span id="summary-price"></span></p>
+            <button onclick="window.print()" class="btn-print">Download Ticket</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+   
+    
+  
+    
+    
+</body>
+</html>

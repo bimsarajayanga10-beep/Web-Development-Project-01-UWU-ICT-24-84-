@@ -1,0 +1,136 @@
+:root {
+    --primary: #35424b6d;
+    --secondary: #028090;
+    --light-bg: #f4f7f6;
+    --dark-text: #2b2d42;
+    --accent: #f26419;
+    --occupied: #9a8c98;
+}
+
+body {
+    
+    background-image: url('01.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}    
+ /* Container layout and positioning */
+.features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;            /* Restricts width so text isn't stretched to the extreme edges */
+  max-width: 1200px;     /* Prevents it from getting too wide on massive monitors */
+  margin:15rem auto 20rem auto; /* 8rem top margin pushes it down, auto centers the entire block */
+  
+  /* Visual styling to make it look like a cohesive section */
+  background-color: #f8f9faa7;   /* Light gray card background */
+  padding: 2.5rem;             /* Inside padding for the cards */
+  border-radius: 12px;         /* Smooth rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Styling for the individual columns */
+.feature-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* Bold headings styling */
+.feature-item h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;        /* High contrast dark text */
+  margin-bottom: 0.5rem; /* Space between heading and paragraph */
+  font-family: sans-serif;
+}
+
+/* Subtext description styling */
+.feature-item p {
+  font-size: 1rem;
+  color: #555555;        /* Balanced gray for easy reading */
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
+
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+header h01 { margin: 0; font-size: 90px; }
+header h1 { margin: 0; font-size: 60px; }
+header p { margin: 5px 0 0 0; opacity: 40; }
+
+
+
+.main-navbar {
+    background-color: #1a252f; 
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center; 
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links li a:hover {
+    color: #3498db; 
+}
+
+
+.nav-links li .btn-booking {
+    background-color: #e74c3c; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li .btn-booking:hover {
+    background-color: #c0392b; 
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+

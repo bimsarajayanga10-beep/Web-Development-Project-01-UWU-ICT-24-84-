@@ -1,0 +1,202 @@
+:root {
+    --primary: #35424b6d;
+    --secondary: #028090;
+    --light-bg: #f4f7f6;
+    --dark-text: #2b2d42;
+    --accent: #f26419;
+    --occupied: #9a8c98;
+}
+
+body {
+    
+    background-image: url('03.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+
+
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+header h01 { margin: 0; font-size: 90px; }
+header h1 { margin: 0; font-size: 40px; }
+header p { margin: 5px 0 0 0; opacity: 30; }
+
+:root {
+  --primary-color: #007bff;
+  --available-color: #e2e8f0;
+  --selected-color: #2ecc71;
+  --occupied-color: #94a3b8;
+  --text-dark: #334155;
+}
+
+.booking-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.booking-container h2 {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+/* Legend Styling */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Base Seat Design */
+.seat {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px 6px 2px 2px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.seat.available { background-color: var(--available-color); border: 1px solid #cbd5e1; }
+.seat.selected { background-color: var(--selected-color); }
+.seat.occupied { background-color: var(--occupied-color); cursor: not-allowed; }
+.seat.available:hover { transform: scale(1.1); }
+
+/* Bus Layout Grid */
+.bus-container {
+  border: 3px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  margin-bottom: 20px;
+}
+
+.front-indicator {
+  background: #cbd5e1;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+/* 5 Column Grid: Row1_Left, Row2_Left, [Aisle], Row1_Right, Row2_Right */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
+  gap: 12px 8px;
+  justify-items: center;
+  align-items: center;
+}
+
+.aisle-space {
+  grid-column: 3;
+}
+
+/* Summary Box & Button */
+.booking-summary {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.booking-summary p {
+  margin: 8px 0;
+  color: var(--text-dark);
+}
+
+.book-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.book-btn:disabled {
+  background-color: var(--occupied-color);
+  cursor: not-allowed;
+}
+
+.book-btn:not(:disabled):hover {
+  background-color: #0056b3;
+}
+.main-navbar {
+    background-color: #1a252f; 
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center; 
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links li a:hover {
+    color: #3498db; 
+}
+
+
+.nav-links li .btn-booking {
+    background-color: #e74c3c; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li .btn-booking:hover {
+    background-color: #c0392b; 
+    color: #ffffff;
+}
