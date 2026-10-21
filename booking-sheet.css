@@ -13,7 +13,102 @@ body {
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; 
+/* ===== Footer Section ===== */
 
+.site-footer {
+    background: #101426;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h2 {
+    color: #ff4757;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 {
+    color: #ff4757;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.footer-section p {
+    color: #d1d5e0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #d1d5e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff4757;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    background: #080b16;
+    border-top: 1px solid #292d40;
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.footer-bottom p {
+    color: #bfc3d2;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 22px;
+    }
+}
 
 }
 
@@ -148,6 +243,7 @@ header p { margin: 5px 0 0 0; opacity: 30; }
 .book-btn:not(:disabled):hover {
   background-color: #0056b3;
 }
+
 .main-navbar {
     background-color: #1a252f; 
     padding: 15px 0;
@@ -156,6 +252,7 @@ header p { margin: 5px 0 0 0; opacity: 30; }
     top: 0;
     z-index: 1000;
 }
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -200,3 +297,4 @@ header p { margin: 5px 0 0 0; opacity: 30; }
     background-color: #c0392b; 
     color: #ffffff;
 }
+
