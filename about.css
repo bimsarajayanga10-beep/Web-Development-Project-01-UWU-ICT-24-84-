@@ -25,25 +25,123 @@ header h01 { margin: 0; font-size: 90px; }
 header h1 { margin: 0; font-size: 40px; }
 header p { margin: 5px 0 0 0; opacity: 30; }
 
+/* ===== Footer Section ===== */
+
+.site-footer {
+    background: #101426;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h2 {
+    color: #ff4757;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 {
+    color: #ff4757;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.footer-section p {
+    color: #d1d5e0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #d1d5e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff4757;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    background: #080b16;
+    border-top: 1px solid #292d40;
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.footer-bottom p {
+    color: #bfc3d2;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 22px;
+    }
+}
+
+
 
 
 
 .about-text-box {
 
-    background-color: rgba(255, 255, 255, 0.45); 
+    background-color: rgba(255, 252, 252, 0.638); 
     
 
     color: #1a1a1a; 
     
 
-    padding: 25px 35px; 
+    padding: 10px 35px; 
     
 
     border-radius: 12px; 
     
 
-    max-width: 800px;
-    margin: 100px auto; 
+    max-width: 1500px;
+    margin: 200px auto; 
     
 
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -54,6 +152,83 @@ header p { margin: 5px 0 0 0; opacity: 30; }
        line-height: 1.6;
     font-size: 16px;
 }
+/* Features Section */
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Individual Feature Cards */
+.feature-item {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Feature Heading */
+.feature-item h3 {
+    color: #12345a;
+    font-size: 24px;
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+/* Feature Description */
+.feature-item p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Hover Effect */
+.feature-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .features-container {
+        flex-direction: column;
+        width: 95%;
+        gap: 15px;
+        padding: 15px;
+        margin: 25px auto;
+    }
+
+    .feature-item {
+        width: 100%;
+        padding: 25px 18px;
+        box-sizing: border-box;
+    }
+
+    .feature-item h3 {
+        font-size: 21px;
+    }
+
+    .feature-item p {
+        font-size: 15px;
+    }
+}
+
 .main-navbar {
     background-color: #1a252f; 
     padding: 15px 0;
@@ -62,6 +237,7 @@ header p { margin: 5px 0 0 0; opacity: 30; }
     top: 0;
     z-index: 1000;
 }
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -106,3 +282,21 @@ header p { margin: 5px 0 0 0; opacity: 30; }
     background-color: #c0392b; 
     color: #ffffff;
 }
+
+/* Bold headings styling */
+.feature-item h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;        /* High contrast dark text */
+  margin-bottom: 0.5rem; /* Space between heading and paragraph */
+  font-family: sans-serif;
+}
+
+/* Subtext description styling */
+.feature-item p {
+  font-size: 1rem;
+  color: #555555;        /* Balanced gray for easy reading */
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
