@@ -16,20 +16,120 @@ body {
 }    
  /* Container layout and positioning */
 .features-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
-  width: 80%;            /* Restricts width so text isn't stretched to the extreme edges */
-  max-width: 1200px;     /* Prevents it from getting too wide on massive monitors */
-  margin:15rem auto 20rem auto; /* 8rem top margin pushes it down, auto centers the entire block */
-  
-  /* Visual styling to make it look like a cohesive section */
-  background-color: #f8f9faa7;   /* Light gray card background */
-  padding: 2.5rem;             /* Inside padding for the cards */
-  border-radius: 12px;         /* Smooth rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1800px;
+
+    /* White box eka page eke pahala side ekata */
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Booking section */
+.booking-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 200px auto 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.booking-box {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    text-align: center;
+}
+
+.booking-box h2 {
+    color: #35424b;
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.booking-box p {
+    color: #626b73;
+    margin-bottom: 28px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: end;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #35424b;
+    font-weight: 600;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #d5dce2;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 15px;
+}
+
+.search-btn {
+    grid-column: 1 / -1;
+    padding: 15px;
+    background: #028090;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #026875;
+}
+
+/* Mobile responsive design */
+@media (max-width: 700px) {
+    .booking-section {
+        width: 92%;
+        margin: 80px auto 35px;
+    }
+
+    .booking-box {
+        padding: 22px;
+    }
+
+    .booking-box h2 {
+        font-size: 25px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Styling for the individual columns */
@@ -55,7 +155,102 @@ body {
 }
 
 
+/* ===== Footer Section ===== */
 
+.site-footer {
+    background: #101426;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h2 {
+    color: #ff4757;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 {
+    color: #ff4757;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.footer-section p {
+    color: #d1d5e0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #d1d5e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff4757;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    background: #080b16;
+    border-top: 1px solid #292d40;
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.footer-bottom p {
+    color: #bfc3d2;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 22px;
+    }
+}
 
 
 header {
@@ -123,6 +318,7 @@ header p { margin: 5px 0 0 0; opacity: 40; }
     background-color: #c0392b; 
     color: #ffffff;
 }
+
 
 
 
